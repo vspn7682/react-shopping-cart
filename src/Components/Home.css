@@ -115,3 +115,30 @@ nav i {
     display: block;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .logo {
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+  .logo span {
+    margin-top: 1.5rem;
+    line-height: 0;
+    font-size: 1.2rem;
+  }
+  .logo span i {
+    display: none;
+  }
+
+  #brand {
+    margin-right: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .hamburger {
+    margin-top: 2rem;
+  }
+}
