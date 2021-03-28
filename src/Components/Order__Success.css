@@ -1,0 +1,28 @@
+.success {
+  margin: 10rem 4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 4rem;
+  max-width: 60%;
+}
+
+.success h1 {
+  font-size: 4.5rem;
+}
+
+.success h2 {
+  font-size: 2.5rem;
+}
+
+.success p {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.success a {
+  color: dodgerblue;
+  transition: all 0.3s;
+}
+
+.success a:hover {
+  color: crimson;
+}
