@@ -115,3 +115,19 @@
 #go__back:hover {
   color: crimson;
 }
+
+@media screen and (max-width: 768px) {
+  .cart__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .cart__empty {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cart__wrapper {
+    padding: 0 1rem;
+  }
+}

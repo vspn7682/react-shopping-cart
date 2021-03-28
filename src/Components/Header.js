@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { useContext } from 'react'
 import { Context } from '../Context/Context'
 import firebase from 'firebase/app'
+import './Home.css'
 
 const Header = () => {
 
@@ -19,6 +20,11 @@ const Header = () => {
 
     })
     history.push('/')
+  }
+
+  const toggle = () => {
+    const ham = document.querySelector('.ham__menu');
+    ham.classList.toggle('show')
   }
 
   return (
@@ -46,15 +52,21 @@ const Header = () => {
             <i className="fa fa-shopping-cart"></i> Cart ({basket.length})
           </Link>
         </div>
-        <div className="hamburger">
+        <div onClick={toggle} className="hamburger">
           <div className="line"></div>
         </div>
         <div className="ham__menu">
-          <Link to="/login" id="login">
-            <i className="fa fa-sign-in"></i> Login
-          </Link>
+          {user ? (
+            <Link to="/" onClick={logout} id="login">
+              <i className="fa fa-sign-out"></i> Logout
+            </Link>
+          ) : (
+              <Link to="/login" id="login">
+                <i className="fa fa-sign-in"></i> Login
+              </Link>
+            )}
           <Link to="/cart" id="cart">
-            <i className="fa fa-shopping-cart"></i> Cart (0)
+            <i className="fa fa-shopping-cart"></i> Cart ({basket.length})
           </Link>
         </div>
       </nav>

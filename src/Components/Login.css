@@ -81,3 +81,16 @@ form #small__info {
   letter-spacing: 1px;
   font-weight: normal;
 }
+
+@media screen and (max-width: 768px) {
+  .login__wrapper {
+    width: 70%;
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .login__wrapper {
+    width: 90%;
+  }
+}
